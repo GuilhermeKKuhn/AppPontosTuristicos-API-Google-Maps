@@ -1,0 +1,33 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Categoria para Organizar as Configurações -->
+    <PreferenceCategory app:title="Configurações do Mapa">
+
+        <!-- Seleção do Tipo de Mapa -->
+        <ListPreference
+            app:key="tipo_mapa"
+            app:title="Selecione o Tipo de Mapa"
+            app:entries="@array/tipos"
+            app:entryValues="@array/tipos"
+            app:defaultValue="NORMAL"
+            app:summary="Escolha o tipo de mapa"
+            app:useSimpleSummaryProvider="true" />
+
+        <!-- Controle de Zoom -->
+        <ListPreference
+            app:key="zoom_level"
+            app:title="Zoom Inicial"
+            app:summary="Ajuste o nível de zoom"
+            app:entries="@array/zoom_levels"
+            app:entryValues="@array/zoom_values"
+            app:defaultValue="10"
+            app:useSimpleSummaryProvider="true"/>
+
+        <!-- Alternador para API de Geocoding -->
+        <SwitchPreferenceCompat
+            app:key="usar_geocodificacao"
+            app:title="Usar API de Geocoding"
+            app:summary="Ativar ou desativar geocodificação automática"
+            app:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>
