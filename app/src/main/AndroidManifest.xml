@@ -25,7 +25,7 @@
         <!-- Configuração da chave da API do Google Maps -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBX-9eNf9e0eAAT4EQcVsRk4pzgHLDN5X8" />
+            android:value="" />
 
         <!-- Atividades do aplicativo -->
         <activity
