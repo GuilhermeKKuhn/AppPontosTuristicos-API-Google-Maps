@@ -39,7 +39,6 @@ class PontoTuristicoDatabaseHelper(context: Context) : SQLiteOpenHelper(context,
         onCreate(db)
     }
 
-    // Função para inserir um ponto turístico no banco de dados
     fun salvarPontoTuristico(nome : String, descricao: String, latitude: Double, longitude: Double, foto: String) {
         val db = writableDatabase
         val sql = """
@@ -56,7 +55,6 @@ class PontoTuristicoDatabaseHelper(context: Context) : SQLiteOpenHelper(context,
         db.close()
     }
 
-    // Obter todos os pontos turísticos
     fun getAllPontosTuristicos(): List<PontoTuristico> {
         val pontosTuristicos = mutableListOf<PontoTuristico>()
         val db = readableDatabase
@@ -103,7 +101,7 @@ class PontoTuristicoDatabaseHelper(context: Context) : SQLiteOpenHelper(context,
     }
 
 
-    fun deletePontoTuristico(id: Int): Int {
+    fun deletePontoTuristico(id: Long): Int {
         val db = writableDatabase
         val rowsDeleted = db.delete(TABLE_NAME, "$COLUMN_ID = ?", arrayOf(id.toString()))
         db.close()

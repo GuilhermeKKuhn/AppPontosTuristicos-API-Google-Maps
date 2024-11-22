@@ -6,5 +6,5 @@ data class PontoTuristico(
     val descricao: String,
     val latitude: Double,
     val longitude: Double,
-    val foto: String
+    val foto: String,
 )

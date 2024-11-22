@@ -39,9 +39,8 @@ class ElementoListaAdapter(
         tvLatitude.text = cadastro.latitude.toString()
         tvLongitude.text = cadastro.longitude.toString()
 
-        val fotoUri = Uri.parse(cadastro.foto)  // Assume que cadastro.fotoPath contém o caminho 'content://'
+        val fotoUri = Uri.parse(cadastro.foto)
 
-        // Carregar a imagem usando ContentResolver
         try {
             val inputStream = context.contentResolver.openInputStream(fotoUri)
             if (inputStream != null) {
@@ -49,11 +48,11 @@ class ElementoListaAdapter(
                 ivFoto.setImageBitmap(bitmap)
                 inputStream.close()
             } else {
-                ivFoto.setImageResource(R.drawable.ic_launcher_background) // Imagem padrão caso não consiga carregar
+                ivFoto.setImageResource(R.drawable.ic_launcher_background)
             }
         } catch (e: FileNotFoundException) {
             e.printStackTrace()
-            ivFoto.setImageResource(R.drawable.ic_launcher_background) // Imagem padrão
+            ivFoto.setImageResource(R.drawable.ic_launcher_background)
         }
 
         return view

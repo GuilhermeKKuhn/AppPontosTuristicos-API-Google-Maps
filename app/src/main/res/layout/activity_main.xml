@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Capturar localização"
-            android:onClick="btCapturarLocalizacaoOnClick" /> <!-- Define a função para o clique do botão -->
+            android:onClick="btCapturarLocalizacaoOnClick" />
 
         <ImageView
             android:id="@+id/ivFoto"
@@ -52,5 +52,12 @@
             android:layout_height="wrap_content"
             android:text="Salvar"
             android:onClick="btSalvarPontoOnClick" />
+
+        <Button
+            android:id="@+id/btExcluir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excluir"
+            android:onClick="btExcluirOnClick" />
     </LinearLayout>
 </ScrollView>

@@ -1,14 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permissões para localização, câmera e armazenamento -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <!-- Declaração de recurso de câmera (opcional ou obrigatório) -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
 
     <application
@@ -22,12 +20,10 @@
         android:theme="@style/Theme.ProjetoPontoTuristico"
         tools:targetApi="31">
 
-        <!-- Configuração da chave da API do Google Maps -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="" />
+            android:value="AIzaSyBX-9eNf9e0eAAT4EQcVsRk4pzgHLDN5X8" />
 
-        <!-- Atividades do aplicativo -->
         <activity
             android:name=".SettingsActivity"
             android:exported="false"
@@ -51,7 +47,6 @@
             android:name=".MainActivity"
             android:exported="true" />
 
-        <!-- FileProvider para compartilhamento de arquivos (como fotos) -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="br.edu.utfpr.projetopontoturistico.provider"

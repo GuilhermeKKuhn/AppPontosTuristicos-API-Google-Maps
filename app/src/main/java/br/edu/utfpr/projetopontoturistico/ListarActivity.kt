@@ -29,14 +29,13 @@ class ListarActivity : AppCompatActivity() {
         listView.setOnItemClickListener { parent, view, position, id ->
             val ponto = listaPontos[position]
 
-            // Passa os dados do ponto turístico para a próxima tela
             val intent = Intent(this, MainActivity::class.java).apply {
                 putExtra("id", ponto.id)
                 putExtra("nome", ponto.nome)
                 putExtra("descricao", ponto.descricao)
                 putExtra("latitude", ponto.latitude)
                 putExtra("longitude", ponto.longitude)
-                //putExtra("foto", ponto.foto)
+                putExtra("foto", ponto.foto)
             }
             startActivity(intent)
         }
@@ -44,7 +43,6 @@ class ListarActivity : AppCompatActivity() {
         btnNovo = findViewById(R.id.btnNovo)
 
         btnNovo.setOnClickListener {
-            // "TROCA" de TELA para a main
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
@@ -52,7 +50,6 @@ class ListarActivity : AppCompatActivity() {
         btnConfig = findViewById(R.id.btnConfig)
 
         btnConfig.setOnClickListener {
-            // "TROCA" de TELA para a config
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
         }
